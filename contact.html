@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Behind The Lens — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><svg class="camera" width="28" height="28" viewBox="0 0 24 24"><path fill="#c40000" d="M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg><span>Behind The Lens</span></a>
+      <button class="nav-toggle" id="navToggle5" aria-expanded="false" aria-controls="mainNav5"><span class="sr-only">Toggle navigation</span><span class="hamburger"></span></button>
+      <nav id="mainNav5" class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact-hero" style="padding-top:28px">
+      <img class="hero-bg" src="contact-hero.jpg" alt="Contact background" loading="lazy">
+      <div class="hero-inner">
+        <h2>Contact Sabina</h2>
+        <p class="lead">Interested in a shoot, collaboration, or workshop? Send a message below.</p>
+      </div>
+    </section>
+
+    <section class="contact-section" style="padding:28px 0 60px">
+      <form class="contact-form" action="#" method="post" novalidate>
+        <label for="name">Your Name</label>
+        <input id="name" name="name" type="text" placeholder="Your full name" required>
+
+        <label for="email">Your Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="service">Service</label>
+        <select id="service" name="service" required>
+          <option value="">Choose a service</option>
+          <option>Portrait Session</option>
+          <option>Event Coverage</option>
+          <option>Wedding Package</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell me about your idea..." required></textarea>
+
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+
+      <aside class="contact-info" aria-label="Contact information">
+        <h3>Other ways to reach me</h3>
+        <p>Email: <a href="mailto: sabinatalapova000@gmail.com">sabinatalapova000@gmail.com</a></p>
+        <p>Instagram: <a href="#">@ssshhhinnn</a></p>
+        <p>Location: Astana, Kazakhstan</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Behind The Lens — Sabina</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){const btn=document.getElementById('navToggle5'),nav=document.getElementById('mainNav5');btn.addEventListener('click',()=>{const expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!expanded));nav.classList.toggle('open')});document.querySelectorAll('#mainNav5 a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}))})();
+  </script>
+</body>
+</html>
