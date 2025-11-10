@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Behind The Lens — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#000000">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Behind The Lens — Home">
+        <svg class="camera" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="#c40000" d="M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+          <rect x="2" y="5" width="20" height="14" rx="2" ry="2" fill="#fff" opacity="0.06"></rect>
+        </svg>
+        <span>Behind The Lens</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="mainNav" class="main-nav" role="navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="site-main">
+    <section class="hero">
+      <img class="hero-bg" src="фон.jpeg" alt="фон" loading="lazy">
+      <div class="hero-inner container">
+        <h1>Every photo tells a story</h1>
+        <p class="lead">Behind The Lens — photography portfolio. Emotion first, technique second.</p>
+        <p class="hero-actions">
+          <a class="btn" href="portfolio.html">View Portfolio</a>
+          <a class="btn ghost" href="about.html">About Sabina</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="features container">
+      <div class="grid-3">
+        <article class="card">
+          <h3>Personal Projects</h3>
+          <p>Documentary, portraits and cinematic series — projects with story and mood.</p>
+        </article>
+        <article class="card">
+          <h3>Commissions</h3>
+          <p>Portraits, events and weddings — clear pricing and professional delivery.</p>
+        </article>
+        <article class="card">
+          <h3>Workshops</h3>
+          <p>Beginner-friendly sessions about light, composition and working with people.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio container">
+      <h2>Recent Work</h2>
+      <div class="gallery-grid" aria-label="Gallery preview">
+        <figure><img src="пикча.jpeg" alt="Photo 1" loading="lazy"></figure>
+        <figure><img src="пикча1.jpeg" alt="Photo 2" loading="lazy"></figure>
+        <figure><img src="пикча2.jpeg" alt="Photo 3" loading="lazy"></figure>
+        <figure><img src="пикча3.jpeg" alt="Photo 4" loading="lazy"></figure>
+        <figure><img src="пикча4.jpeg" alt="Photo 5" loading="lazy"></figure>
+        <figure><img src="пикча5.jpeg" alt="Photo 6" loading="lazy"></figure>
+      </div>
+      <p class="center"><a class="btn" href="portfolio.html">See Full Portfolio</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Behind The Lens</h4>
+          <p>Sabina Talapova</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:sabinatalapova000@gmail.com">sabinatalapova000@gmail.com</a></p>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <p><a href="#">Instagram</a> · <a href="#">Telegram</a></p>
+        </div>
+      </div>
+      <p class="copyright">© 2025 Behind The Lens — Sabina</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const btn = document.getElementById('navToggle');
+      const nav = document.getElementById('mainNav');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+      document.querySelectorAll('.main-nav a').forEach(a => {
+        a.addEventListener('click', () => {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
